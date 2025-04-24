@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ### 4. Lancer N.E.M.O.S.
 
 ```bash
-python main.py
+python run.py
 ```
 
 ---
@@ -106,6 +106,4 @@ Ce projet est sous licence **MIT** – vous pouvez l’utiliser, le modifier et 
 > **N.E.M.O.S. est plus qu’un assistant, c’est un compagnon numérique intelligent.**  
 > Faites de la technologie votre alliée, et laissez N.E.M.O.S. vous guider.
 
-```
 
----
