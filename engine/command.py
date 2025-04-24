@@ -19,7 +19,7 @@ def speak(text):
     # Sélectionner une voix masculine disponible
     male_voice_found = False
     for voice in voices:
-        if "male" in voice.name.lower() or "hugo" in voice.name.lower() or "paul" in voice.name.lower():
+        if "male" in voice.name.lower() or "David" in voice.name.lower() :
             engine.setProperty('voice', voice.id)
             male_voice_found = True
             break
