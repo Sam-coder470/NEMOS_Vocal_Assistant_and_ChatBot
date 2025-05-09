@@ -28,12 +28,10 @@ def playAssistantSound():
    music_dir = "C:\\Users\\User\\Desktop\\N.E.M.O.S\\N.E.M.O.S\\N.E.M.O.S\\www\\assets\\audio\\son_ouverture.mp3"
    threading.Thread(target=playsound, args=(music_dir,), daemon=True).start()
 
-    
 # Debut fonction pour la lecture de videos sur youtube
 
 def extract_yt_term(command):
     """Extrait le titre de la vidéo YouTube et applique des filtres intelligents."""
-    
     command = command.lower().strip()
     command = re.sub(r"^(mets|joue|lance|play)\s+", "", command)  # Supprime "mets ", "joue ", etc.
     command = command.replace(" sur youtube", "").replace(" on youtube", "").strip()  # Supprime "sur YouTube"
@@ -51,12 +49,10 @@ def extract_yt_term(command):
         command += " tutoriel cours complet"
     elif "informatif" in command or "explication" in command:
         command += " vidéo éducative explication"
-    
     return command if command else None
 
 def PlayYoutube(query):
     """Joue une vidéo YouTube en fonction de la requête utilisateur."""
-    
     search_term = extract_yt_term(query)
 
     if search_term:
@@ -73,18 +69,14 @@ def PlayYoutube(query):
             print(f"⚠️ Erreur : {e}")
     else:
         speak("Je n'ai pas compris quelle vidéo jouer. Pouvez-vous reformuler ?")
-        
 #Fin fonction pour la lecture sur youtube
-        
 # Debut fonction pour le lancement des applications
- 
        # Fonction pour vérifier si une application est installée en utilisant son chemin
 def is_installed(app_path):
     """Vérifie si l'application est installée en utilisant le chemin donné."""
     return os.path.exists(app_path)
 
        # Recherche le chemin d'une application en utilisant la commande 'where' (Windows)
-       
 def find_app_path(query):
     """Recherche le chemin d'une application en utilisant 'where' (Windows)."""
     try:
@@ -370,7 +362,6 @@ def hotword():
         if paud is not None:
             paud.terminate()
 
-            
 # fin fonction de detection de mots clees
 
 #Chat Bot
